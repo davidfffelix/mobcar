@@ -12,6 +12,7 @@ void main() {
             'MOBCAR',
             style: TextStyle(
               color: Color(0xff00ADEE),
+              fontWeight: FontWeight.normal,
             ),
           ),
           actions: <Widget>[
@@ -20,71 +21,93 @@ void main() {
               icon: Icon(Icons.format_indent_decrease),
               tooltip: 'Adicionar novo veículo',
               onPressed: (){
-                },
+              },
             ),
           ],
         ),
         body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Texto 1'),
-              Text('Texto 2'),
+          child:
 
           Card(
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  ListTile(
-                      dense:true,
-                      contentPadding: EdgeInsets.fromLTRB(1.0, 5.0, 1.0, 5.0),
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ListTile(
+                  dense: true,
+                  contentPadding: EdgeInsets.fromLTRB(1, 5, 1, 5),
 
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Texto(tit:ctas[index].banco,tam:15.0,cor: Utils.corCabecalho,negrito: true, left: 10,),
-                          Texto(tit:ctas[index].tipo,tam:11.0,cor: Colors.black),
-                        ],
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Title 1',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            SizedBox(height : 10.0),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Texto(tit:ag+ctas[index].agencia,tam:13.0,negrito: true,cor: Colors.black,left: 10,),
-
-                                Transform.translate(
-                                  offset: Offset(25, 0),
-                                  child: Texto(tit:ct+ctas[index].conta,tam:13.0,negrito: true,cor: Colors.black),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height : 10.0),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Texto(tit:'Cpf '+ctas[index].documento,tam:13.0,negrito: true,cor: Colors.black,left: 10,),
-                                Texto(tit:ctas[index].padrao=='1'?'Padrão':'',tam:13.0,negrito: true,cor: Colors.black),
-                              ],
-                            ),
-                            Texto(tit:'Titular : '+ctas[index].titular,tam:13.0,negrito: true,cor: Colors.black,top: 10,left: 10,),
-                          ]
-                      ),
-                      trailing: Container(
-                          child: Utils.menus(ctas[index],context,'contas',
-                              'cliente_conta_manut','id',ctas[index].id.toString(),
-                              'cliente_conta','A')
-                      )
+                    ],
                   ),
-                ]
+
+                  subtitle: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Title 2',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.black,
+                        ),
+                        onPressed: (){
+
+                        },
+                        child: Text('Add new',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  child: Divider(
+                    color: Colors.black,
+                    thickness: 1,
+                  ),
+                ),
+
+                ListTile(
+                  leading: Image.asset(
+                      'assets/car.png'
+                  ),
+                  title: Text(
+                      'Title'
+                  ),
+                  subtitle: Text(
+                      'Year'
+                  ),
+                  trailing: IconButton(
+                    icon: Icon(Icons.more_vert),
+                    onPressed: () {},
+                  ),
+                ),
+
+
+              ],
+
             ),
           ),
-          ),
         ),
-        /*bottomNavigationBar: BottomNavigationBar(
+      ),
+      /*bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Color(0xff000000),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -97,7 +120,6 @@ void main() {
 
           ],
         ),*/
-        ),
-      ),
-    );
+    ),
+  );
 }
