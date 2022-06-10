@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/homepage.dart';
 
 void main() {
   runApp(
@@ -26,88 +27,21 @@ void main() {
           ],
         ),
         body: SafeArea(
-          child:
-
-          Card(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ListTile(
-                  dense: true,
-                  contentPadding: EdgeInsets.fromLTRB(1, 5, 1, 5),
-
-                  title: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Title 1',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  subtitle: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Title 2',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.black,
-                        ),
-                        onPressed: (){
-
-                        },
-                        child: Text('Add new',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 1,
-                  ),
-                ),
-
-                ListTile(
-                  leading: Image.asset(
-                      'assets/car.png'
-                  ),
-                  title: Text(
-                      'Title'
-                  ),
-                  subtitle: Text(
-                      'Year'
-                  ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.more_vert),
-                    onPressed: () {},
-                  ),
-                ),
-
-
-              ],
-
-            ),
+          child: ListView(
+            children: [
+              HomePage()
+              HomePage(),
+              HomePage(),
+              HomePage(),
+              HomePage(),
+              HomePage(),
+              HomePage(),
+              HomePage(),
+            ],
           ),
         ),
-      ),
-      /*bottomNavigationBar: BottomNavigationBar(
+
+      bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Color(0xff000000),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -119,7 +53,8 @@ void main() {
             ),
 
           ],
-        ),*/
+        ),
     ),
-  );
+  ),
+      );
 }
