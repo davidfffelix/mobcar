@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/homepage.dart';
+import 'homepage.dart';
 
 void main() {
   runApp(
@@ -21,40 +21,73 @@ void main() {
               color: Color(0xff00ADEE),
               icon: Icon(Icons.format_indent_decrease),
               tooltip: 'Adicionar novo veículo',
-              onPressed: (){
-              },
+              onPressed: () {},
             ),
           ],
         ),
         body: SafeArea(
           child: ListView(
             children: [
-              HomePage()
               HomePage(),
+              SizedBox(
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
+              ),
               HomePage(),
+              SizedBox(
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
+              ),
               HomePage(),
+              SizedBox(
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
+              ),
               HomePage(),
+              SizedBox(
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
+              ),
               HomePage(),
+              SizedBox(
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
+              ),
               HomePage(),
+              SizedBox(
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
+              ),
               HomePage(),
             ],
           ),
         ),
 
-      bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color(0xff000000),
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
 
-          icon: Icon(
-            Icons.copyright,
-          ),
+         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Color(0xff000000),
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.copyright,
+              ),
               label: '2020. All rights reserved to Mobcar.',
             ),
-
           ],
         ),
+      ),
     ),
-  ),
-      );
+  );
 }

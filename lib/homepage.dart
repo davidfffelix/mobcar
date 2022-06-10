@@ -6,13 +6,22 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: ListView.builder(
         itemCount: 8,
-        itemBuilder:(context, int index),{
-        return ListTile(
-        title: Text(
-        'Title'
-        ),
-        ),
-      },
+        itemBuilder: (context, index) {
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: ListTile(
+              dense: true,
+              contentPadding: EdgeInsets.fromLTRB(5, 3, 5, 3),
+              leading: Image.asset('assets/car.png'),
+              title: Text('Title'),
+              subtitle: Text('Year'),
+              trailing: IconButton(
+                icon: Icon(Icons.more_vert),
+                onPressed: () {},
+              ),
+            ),
+          );
+        },
       ),
     );
   }
