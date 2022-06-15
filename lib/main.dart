@@ -20,7 +20,6 @@ void main() {
             IconButton(
               color: Color(0xff00ADEE),
               icon: Icon(Icons.format_indent_decrease),
-              tooltip: 'Adicionar novo veículo',
               onPressed: () {},
             ),
           ],
@@ -74,9 +73,7 @@ void main() {
             ],
           ),
         ),
-
-
-         bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Color(0xff000000),
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
